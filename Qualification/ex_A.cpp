@@ -20,20 +20,22 @@
 */
 
 #include <iostream>
+#include <vector>
+#include <map>
 
 using namespace std;
 
 int main() {
     int n, res = 0;
-    cin » n;
+    cin >> n;
     vector<int> arr(n);
     map<int, int> mp;
     for (int i = 0; i < n; i++) {
-        cin » arr[i];
+        cin >> arr[i];
         mp[arr[i]] += 1;
     }
     if (mp[1] == 0) {
-        cout « 0;
+        cout << 0;
         return 0;
     }
     int i = 0;
@@ -55,6 +57,6 @@ int main() {
         mp[arr[i]]--;
         }
     }
-    cout « res;
+    cout << res;
     return 0;
 }
